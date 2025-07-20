@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bible Life Verses - Daily Scripture & Spiritual Guidance</title>
+    <meta name="description" content="Find peace and guidance through daily Bible verses, spiritual support, and personalized scripture recommendations for every life situation.">
+    <meta name="keywords" content="Bible verses, spiritual guidance, daily scripture, prayer, Christian app, Bible app">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .header {
+            text-align: center;
+            padding: 50px 0;
+            color: white;
+        }
+        
+        .header h1 {
+            font-size: 3.5em;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .header p {
+            font-size: 1.3em;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+        
+        .subtitle {
+            font-size: 1.1em;
+            color: #f0f0f0;
+            margin-bottom: 40px;
+        }
+        
+        .main-content {
+            background: white;
+            border-radius: 15px;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            margin-bottom: 30px;
+        }
+        
+        .hero-section {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .hero-section h2 {
+            color: #667eea;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+        
+        .hero-section p {
+            font-size: 1.2em;
+            color: #666;
+            margin-bottom: 30px;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+        
+        .feature-card {
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 12px;
+            text-align: center;
+            border: 2px solid #e9ecef;
+            transition: all 0.3s ease;
+        }
+        
+        .feature-card:hover {
+            border-color: #667eea;
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.2);
+        }
+        
+        .feature-card h3 {
+            color: #667eea;
+            font-size: 1.5em;
+            margin-bottom: 15px;
+        }
+        
+        .feature-card p {
+            color: #666;
+            margin-bottom: 20px;
+        }
+        
+        .feature-icon {
+            font-size: 3em;
+            margin-bottom: 20px;
+            color: #667eea;
+        }
+        
+        .cta-section {
+            text-align: center;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 50px;
+            border-radius: 15px;
+            margin: 40px 0;
+        }
+        
+        .cta-section h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+        
+        .cta-section p {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 15px 30px;
+            background-color: white;
+            color: #667eea;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 1.1em;
+            font-weight: bold;
+            margin: 10px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+        
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+        }
+        
+        .btn-secondary {
+            background-color: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+        
+        .btn-secondary:hover {
+            background-color: white;
+            color: #667eea;
+        }
+        
+        .legal-links {
+            text-align: center;
+            margin: 30px 0;
+        }
+        
+        .legal-links a {
+            color: #667eea;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: 500;
+        }
+        
+        .legal-links a:hover {
+            text-decoration: underline;
+        }
+        
+        .footer {
+            text-align: center;
+            color: white;
+            padding: 30px 0;
+            opacity: 0.8;
+        }
+        
+        .app-info {
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 12px;
+            margin: 30px 0;
+        }
+        
+        .app-info h3 {
+            color: #667eea;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+        
+        .info-item {
+            text-align: center;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            border: 1px solid #e9ecef;
+        }
+        
+        .info-item h4 {
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
+            
+            .header h1 {
+                font-size: 2.5em;
+            }
+            
+            .main-content {
+                padding: 25px;
+            }
+            
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .cta-section {
+                padding: 30px 20px;
+            }
+            
+            .cta-section h2 {
+                font-size: 2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Bible Life Verses</h1>
+            <p>Daily Scripture & Spiritual Guidance</p>
+            <div class="subtitle">
+                Find peace and guidance through personalized Bible verses for every life situation
+            </div>
+        </div>
+        
+        <div class="main-content">
+            <div class="hero-section">
+                <h2>Your Daily Source of Spiritual Strength</h2>
+                <p>Bible Life Verses is your companion for finding relevant scripture, receiving daily inspiration, and getting spiritual guidance tailored to your life's journey.</p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">📖</div>
+                    <h3>Smart Bible Search</h3>
+                    <p>Find relevant verses by searching topics, emotions, or life situations. Get personalized scripture recommendations that speak to your current needs.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🔔</div>
+                    <h3>Daily Notifications</h3>
+                    <p>Receive inspiring Bible verses and spiritual messages throughout your day. Customize notification times to fit your schedule.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">💬</div>
+                    <h3>Spiritual Guidance</h3>
+                    <p>Get personalized spiritual support and biblical wisdom for your questions, struggles, and life decisions.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🎯</div>
+                    <h3>Life Situation Topics</h3>
+                    <p>Browse curated collections of verses organized by life situations - from anxiety and stress to relationships and gratitude.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🙏</div>
+                    <h3>Prayer & Reflection</h3>
+                    <p>Take time for prayer and reflection with guided prompts and a private space for your spiritual thoughts.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">📱</div>
+                    <h3>Offline Access</h3>
+                    <p>Access Bible verses and spiritual content even without an internet connection. Your spiritual journey never stops.</p>
+                </div>
+            </div>
+            
+            <div class="app-info">
+                <h3>App Information</h3>
+                <div class="info-grid">
+                    <div class="info-item">
+                        <h4>Version</h4>
+                        <p>1.0</p>
+                    </div>
+                    <div class="info-item">
+                        <h4>Platform</h4>
+                        <p>iOS 18.0+</p>
+                    </div>
+                    <div class="info-item">
+                        <h4>Language</h4>
+                        <p>English</p>
+                    </div>
+                    <div class="info-item">
+                        <h4>Size</h4>
+                        <p>~50 MB</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="cta-section">
+                <h2>Start Your Spiritual Journey Today</h2>
+                <p>Download Bible Life Verses and discover how scripture can bring peace, guidance, and strength to your daily life.</p>
+                <a href="https://apps.apple.com/app/bible-life-verses" class="btn">Download on App Store</a>
+                <a href="support.html" class="btn btn-secondary">Get Support</a>
+            </div>
+            
+            <div class="legal-links">
+                <a href="terms-of-service.html">Terms of Service</a>
+                <a href="privacy-policy.html">Privacy Policy</a>
+                <a href="support.html">Support</a>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>&copy; 2025 Bible Life Verses. All rights reserved.</p>
+            <p>Supporting your spiritual journey, one verse at a time.</p>
+        </div>
+    </div>
+</body>
+</html> 
